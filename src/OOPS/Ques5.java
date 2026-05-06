@@ -7,6 +7,7 @@ public class Ques5 {
     int x;
 
     public Ques5(int x){
+
         this.x = x;
     }
 

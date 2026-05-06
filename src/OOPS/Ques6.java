@@ -1,6 +1,6 @@
 package OOPS;
 
-
+// use this() to call another constructor in the same class.
 
 public class Ques6 {
 
