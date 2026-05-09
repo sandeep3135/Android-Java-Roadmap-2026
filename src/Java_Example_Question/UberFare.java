@@ -1,5 +1,7 @@
 package Java_Example_Question;
 
+//Calculate Uber Fare price in day and night hour
+
 public class UberFare {
 
     public void calculateFare(double distance, int hourOfDay){
