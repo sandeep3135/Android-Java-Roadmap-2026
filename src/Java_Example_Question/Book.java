@@ -1,5 +1,8 @@
 package Java_Example_Question;
 
+// Create Book class for library management book class contain title and author name of book
+// it shows status of book is available or not you borrow book and return the book
+
 public class Book {
 
     String title;
