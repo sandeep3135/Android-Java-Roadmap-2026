@@ -4,7 +4,7 @@ package Java_Example_Question;
 
 public class BankManager {
     private String accountHolder;
-    private double balance;
+    protected double balance;
 
     public BankManager(String accountHolder, double balance){
         this.accountHolder = accountHolder;
@@ -18,6 +18,17 @@ public class BankManager {
             System.out.println("Deposit for " + accountHolder + ": +$" + amount);
         } else {
             System.out.println("Invalid deposit for " + accountHolder);
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+            System.out.println("Withdrawal for " + accountHolder + ": -$" + amount);
+        } else if (amount > balance) {
+            System.out.println("Insufficient funds for " + accountHolder + "!");
+        } else {
+            System.out.println("Invalid withdrawal amount!");
         }
     }
 
