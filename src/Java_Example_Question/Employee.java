@@ -11,12 +11,28 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void getSalary(){
-
+    // Standard Getter for Name
+    public String getName() {
+        return name;
     }
 
-    public void setSalary(double newSalary){
+    // Standard Getter for ID
+    public int getId() {
+        return id;
+    }
 
+    // Fixed Getter for Salary
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double newTotalSalary) {
+        if (newTotalSalary > this.salary) {
+            this.salary = newTotalSalary;
+            System.out.println("Promotion! New salary for id: "+id +", "+ name + " is: $" + salary);
+        } else {
+            System.out.println("Error: Cannot decrease salary for id: "+id +", "+ name);
+        }
     }
 
     public static void main(String[] args) {
@@ -26,8 +42,17 @@ public class Employee {
         employees[1] = new Employee(100,"Prashant",15000);
         employees[2] = new Employee(105,"Vishal",35000);
 
-        employees[0].getSalary();
+        //employees[0].getSalary();
+        employees[0].setSalary(25200);
+        employees[2].setSalary(-200);
 
+
+        System.out.println("-----------------Employee Details---------------");
+        for (int i = 0; i < employees.length; i++){
+            if(employees[i] != null){
+                System.out.println("Employee id: "+employees[i].getId()+ ", Employee name: "+employees[i].getName()+ ", Employee total salary: $"+employees[i].getSalary());
+            }
+        }
 
     }
 }
