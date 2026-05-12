@@ -1,5 +1,7 @@
 package Java_Example_Question;
 
+//implement employee details keep their data secure and private and salary validation etc.
+
 public class Employee {
     private int id;
     private String name;
